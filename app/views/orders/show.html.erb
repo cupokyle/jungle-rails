@@ -1,12 +1,25 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+    <h1>Thank you for your order!</h1>
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
-  </div>
+  <h3 class="text-center">Order #<%= @order.id %></h3>
+  <tbody>
+  <% @order.line_items.each do |item| %>
+    </br>
+    <%= render 'item', product: item.product, quantity: item[:quantity].to_i, item_price: item[:item_price_cents], total_price: item[:total_price_cents] %>
+  <% end %>
+  </tbody>
+  
+  </br>
+  <h3 class="text-center"> Total:  <%= humanized_money_with_symbol @order.total_cents / 100.0 %> </h3>
+  </br>
+  
+  <h5 class="mt-5 text-center">A copy of this reciept has been sent to <strong><%= @order.email %></strong></h5>
+    </div>
+
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
