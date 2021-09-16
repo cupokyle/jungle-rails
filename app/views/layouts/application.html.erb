@@ -11,6 +11,16 @@
   <%= render 'layouts/top_nav' %>
 
   <main class="container">
+  
+  <% if active_sale? %>
+    <% Sale.active.each do |sale| %>
+      <p class="alert alert-info text-center">
+      Enjoy <%= sale.percent_off %>% off with our <%= sale.name %> sale. On now!
+      </p>
+      <% end %>
+      <% end %>
+
+
     <%= yield %>
   </main>
 
