@@ -12,10 +12,10 @@
 <br>
 <div class="text-center">
   <td>
-  <h5><%= quantity %> × <%= humanized_money_with_symbol product.price %></h5>
+  <h5 class="isNum"><%= quantity %> × <%= humanized_money_with_symbol product.price %></h5>
   </td>
   <td>
-   <h4><b>Total: <%= humanized_money_with_symbol product.price * quantity %></b></h4>
+   <h4 class="isNum"><b>Total: <%= humanized_money_with_symbol product.price * quantity %></b></h4>
   </td>
   </div>
 </tr>

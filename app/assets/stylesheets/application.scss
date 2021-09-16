@@ -24,6 +24,11 @@ body {
   .isNum {
     font-family: $secondary_font_family;
   }
+  .quantityCell {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+  }
 }
 
 // Bootstrap adjustments
