@@ -1,19 +1,26 @@
 <!-- app/views/users/new.html.erb -->
 
-<h1>Signup:</h1>
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="text-center">Sign Up</h2>
+    </br>
+    <div class="box container-fluid">
+    <%= form_for :user, url: '/users' do |f| %>
+      <ul class="list-unstyled container">
 
-<%= form_for :user, url: '/users' do |f| %>
-
-  First Name: <%= f.text_field :first_name %>
-  </br>
-  Lirst Name: <%= f.text_field :last_name %>
-  </br>
-  Email: <%= f.text_field :email %>
-  </br>
-  Password: <%= f.password_field :password %>
-  </br>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  </br>
-  <%= f.submit "Submit" %>
-
-<% end %>
+     <li class="container text-center"> First Name: <%= f.text_field :first_name %> </li>
+     </br>
+     <li class="container text-center" >  Last Name: <%= f.text_field :last_name %> </li>
+     </br>
+     <li class="container text-center"> Email: <%= f.text_field :email %> </li>
+     </br>
+     <li class="container text-center">  Password: <%= f.password_field :password %> </li>
+     </br>
+     <li class="container text-center">  Confirm Password: <%= f.password_field :password_confirmation %> </li>
+     </br>
+     <li class="text-center">  <%= f.submit "Submit" %> </li>
+      </ul>
+    <% end %>
+    </div>
+  </div>
+</div>

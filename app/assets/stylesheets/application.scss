@@ -2,6 +2,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+// Variables
+$primary_font_family: "Cabin Condensed", sans-serif;
+$secondary_font_family: "Lato", sans-serif;
 
 // App
 @import "products";
@@ -9,6 +15,15 @@
 // Global
 body {
   padding-top: 70px;
+  font-family: $primary_font_family;
+  .jumbotron,
+  .sale-banner {
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+  }
+  aside,
+  .isNum {
+    font-family: $secondary_font_family;
+  }
 }
 
 // Bootstrap adjustments

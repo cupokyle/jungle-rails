@@ -1,11 +1,17 @@
-<h1>Login</h1>
-
-<%= form_tag '/login' do %>
-
-  Email: <%= text_field_tag :email %>
-  </br>
-  Password: <%= password_field_tag :password %>
-  </br>
-  <%= submit_tag "Submit" %>
-
-<% end %>
+<div class="jumbotron">
+<div class="container">
+    <h2 class="text-center">Login</h2>
+    </br>
+    <div class="box">
+    <%= form_tag '/login' do %>
+      <ul class="list-unstyled container">
+      <li class="container text-center"> Email: <%= text_field_tag :email %> </li>
+      </br>
+      <li class="container text-center">  Password: <%= password_field_tag :password %> </li>
+      </br>
+      <li class="text-center">  <%= submit_tag "Submit" %> </li>
+       </ul>
+    <% end %>
+    </div>
+  </div>
+</div>
